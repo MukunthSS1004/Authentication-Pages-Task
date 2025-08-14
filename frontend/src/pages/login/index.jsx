@@ -41,8 +41,6 @@ export default function Login() {
       setWarning(err?.response?.data?.message || 'Login failed')
     }
   }
-
-
   return (
     <Container maxWidth="sm"   sx={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
       <Paper elevation={3} sx={{ p: 4, borderRadius: 3, width: "100%" }}>
@@ -56,23 +54,8 @@ export default function Login() {
         {warning && <Alert severity="warning" sx={{ mb: 2 }}>{warning}</Alert>}
 
         <Box component="form" onSubmit={handleSubmit} noValidate>
-          <TextField margin="normal"
-            required
-            fullWidth
-            id="identifier"
-            label="Email or Username"
-            name="identifier"
-            autoFocus
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-          />
+          <TextField margin="normal" required fullWidth id="identifier" label="Email or Username" name="identifier" autoFocus/> 
+          <TextField margin="normal" required fullWidth name="password" label="Password" type="password" id="password" />
           <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
 
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>

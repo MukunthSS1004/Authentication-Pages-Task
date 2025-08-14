@@ -81,9 +81,7 @@ export default function Signup() {
         <Box mt={2} textAlign="center">
           <Typography variant="body2" color="textSecondary">
             Already have an account?{' '}
-            <Link component={RouterLink} to="/" variant="body2">
-              Login
-            </Link>
+            <Link component={RouterLink} to="/" variant="body2">Login</Link>
           </Typography>
         </Box>
       </Paper>
